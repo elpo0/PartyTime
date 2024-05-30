@@ -1,0 +1,507 @@
+/* Reset de estilos y configuración inicial para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Definición de variables CSS para colores */
+:root {
+    --colorPrincipal: white;
+    --colorSecundario: black;
+}
+
+/* Definición de las fuentes */
+@font-face {
+    font-family: 'FuenteCuerpo';
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'FuenteBlack';
+    src: url('../fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: 'FuenteLight';
+    src: url('../fonts/Montserrat-Light.ttf');
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: 'FuenteCuerpo';
+    font-style: normal;
+    color: var(--colorPrincipal);
+    background: black;
+}
+
+/* Clase de contenedor flex */
+.container {
+    width: 80%;
+    min-width: 1200px;
+    max-width: 1400px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos para las secciones dentro del elemento principal */
+main section {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para todas las imágenes */
+img {
+    width: 100%;
+}
+
+/* Estilos para los encabezados */
+h1 {
+    font-family: 'FuenteBlack';
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--colorPrincipal);
+    margin: 4px;
+    padding: 10px;
+}
+
+h2 {
+    font-family: 'FuenteBlack';
+    font-size: 32px;
+}
+
+h3 {
+    font-family: 'FuenteCuerpo';
+    font-size: 48px;
+    width: 100%;
+}
+
+h4 {
+    font-family: 'FuenteLight';
+    font-size: 38px;
+    width: 100%;
+}
+
+/* Estilos para el encabezado */
+header {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+header figure {
+    width: 100px;
+}
+
+header nav ul {
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--colorPrincipal);
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    border-bottom: 5px solid transparent;
+}
+
+header nav ul li a:hover {
+    border-bottom: 5px solid var(--colorPrincipal);
+}
+
+/* Estilos para el elemento principal */
+main {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main section h2 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilos específicos para la sección principal */
+.Principal div {
+    justify-content: space-between;
+}
+
+.Principal article {
+    width: 590px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Principal figure {
+    width: 590px;
+}
+
+.Principal figure img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.Principal div article div {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* Estilos específicos para la sección de fechas */
+.Fechas {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.Fechas div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.Fechas div p {
+    width: 900px;
+    display: block;
+    margin: 30px auto;
+}
+
+.Fechas article {
+    width: 30%;
+    padding: 30px 10px;
+    background-color: var(--colorPrincipal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Fechas .contenedorArticulos {
+    color: var(--colorSecundario);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Fechas article a {
+    margin-top: 20px;
+}
+
+/* Estilos específicos para la sección galería */
+.Galeria {
+    background-color: var(--colorPrincipal);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: var(--colorSecundario);
+}
+
+.Galeria div p {
+    width: 900px;
+    display: block;
+    margin: 30px auto;
+}
+
+/* Estilos específicos para la grilla */
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 500px);
+    gap: 10px;
+}
+
+.grilla article {
+    padding: 24px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: left;
+}
+
+.grilla article:first-child {
+    background-image: url(../image/1.jpg);
+    grid-column: span 2;
+}
+
+.grilla article:nth-child(2) {
+    background-image: url(../image/2.jpg);
+}
+
+.grilla article:nth-child(3) {
+    background-image: url(../image/3.jpg);
+    grid-row: span 2;
+}
+
+.grilla article:nth-child(4) {
+    background-image: url(../image/4.jpg);
+    grid-column: span 2;
+}
+
+.grilla article:nth-child(5) {
+    background-image: url(../image/5.jpg);
+}
+
+/* Estilos específicos para la sección de entradas */
+.Entradas {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.Entradas div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Entradas div p {
+    width: 900px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.Entradas div a {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.Entradas article {
+    justify-content: center;
+    text-align: left;
+    width: 380px;
+    height: auto;
+    color: var(--colorSecundario);
+    background-color: var(--colorPrincipal);
+    padding-top: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Entradas div article p {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
+.Entradas article.article-central {
+    height: auto;
+    margin-top: -25px;
+    padding-top: 45px;
+    margin-bottom: -25px;
+}
+
+.Entradas article.article-central h3 {
+    font-size: 54px;
+}
+
+.Entradas label {
+    margin-top: 60px;
+    width: 380px;
+    text-align: left;
+}
+
+.Entradas form {
+    margin-top: 0;
+    display: contents;
+}
+
+.Entradas form input {
+    width: 380px;
+    height: 40px;
+    font-family: 'FuenteBlack';
+}
+
+.Entradas form input[type="submit" i]:hover {
+    background-color: var(--colorSecundario);
+    color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+}
+
+.Entradas form input::placeholder {
+    padding-left: 10px;
+}
+
+.Entradas div article ul {
+    justify-content: center;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.list-personalizado {
+    list-style-type: none;
+}
+
+.list-personalizado li {
+    padding-left: 25px;
+    padding-top: 10px;
+    position: relative;
+    text-align: left;
+    justify-content: center;
+}
+
+.list-personalizado li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: green;
+}
+
+.list-personalizado li.cross::before {
+    content: "🚫";
+    color: red;
+}
+
+.Artistas {
+    background-color: var(--colorPrincipal);
+    color: var(--colorSecundario);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.Artistas div p {
+    width: 900px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.Artistas table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.Artistas th,
+.Artistas td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.Artistas th {
+    background-color: var(--colorPrincipal);
+    color: var(--colorSecundario);
+}
+
+/* Estilos para las filas impares */
+.Artistas tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.Artistas tr:nth-child(odd):hover {
+    background-color: #c6c6c6;
+}
+
+/* Estilos para las filas pares */
+.Artistas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.Artistas tr:nth-child(even):hover {
+    background-color: #c1c1c1;
+}
+
+/* SECCION FOOTER */
+footer {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer figure {
+    width: 100px;
+}
+
+footer p {
+    font-family: 'FuenteLight';
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+/* Estilos para los botones */
+.button1,
+.button2,
+.button3,
+.button4 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'FuenteBlack';
+    font-size: 16px;
+}
+
+.button1 {
+    width: 49%;
+    height: 60px;
+    color: var(--colorSecundario);
+    background-color: var(--colorPrincipal);
+}
+
+.button1:hover {
+    color: var(--colorPrincipal);
+    background-color: var(--colorSecundario);
+    border: 2px solid var(--colorPrincipal);
+}
+
+.button2 {
+    width: 49%;
+    height: 60px;
+    color: var(--colorPrincipal);
+    background-color: var(--colorSecundario);
+    border: 2px solid var(--colorPrincipal);
+}
+
+.button2:hover {
+    color: var(--colorSecundario);
+    background-color: var(--colorPrincipal);
+    border: 2px solid var(--colorPrincipal);
+}
+
+.button3,
+.button4 {
+    margin-top: 20px;
+    width: 49%;
+    height: 40px;
+    color: var(--colorSecundario);
+    border: 2px solid var(--colorSecundario);
+}
+
+.button3:hover,
+.button4:hover {
+    color: var(--colorSecundario);
+    background-color: var(--colorPrincipal);
+    border: 1px solid var(--colorSecundario);
+}
+
+.button4 {
+    width: 100%;
+}
